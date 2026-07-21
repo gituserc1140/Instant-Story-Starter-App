@@ -189,9 +189,8 @@ def build_user_prompt(genre: str, tone: str) -> str:
     return prompt
 
 
-def call_groq(api_key: str, user_prompt: str) -> str:
+def call_groq(client: Groq, user_prompt: str) -> str:
     """Call the Groq chat completions API and return the story opening line."""
-    client = Groq(api_key=api_key)
     response = client.chat.completions.create(
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
@@ -199,7 +198,7 @@ def call_groq(api_key: str, user_prompt: str) -> str:
         ],
         model=GROQ_MODEL,
         max_tokens=120,
-        temperature=0.95,
+        temperature=0.82,
     )
     return response.choices[0].message.content.strip()
 
@@ -271,6 +270,11 @@ def main():
     if "story_error" not in st.session_state:
         st.session_state.story_error = None
 
+    # Re-create client only when the key changes
+    if st.session_state.get("groq_client_key") != api_key:
+        st.session_state.groq_client = Groq(api_key=api_key)
+        st.session_state.groq_client_key = api_key
+
     # ── Genre / Tone selectors ─────────────────────────────────────
     col1, col2 = st.columns(2)
     with col1:
@@ -293,7 +297,7 @@ def main():
             user_prompt = build_user_prompt(genre, tone)
             with st.spinner("Crafting your opening line..."):
                 try:
-                    result = call_groq(api_key, user_prompt)
+                    result = call_groq(st.session_state.groq_client, user_prompt)
                     st.session_state.story_line = result
                 except Exception as exc:
                     st.session_state.story_error = str(exc)

@@ -25,7 +25,7 @@ Optional genre and tone selectors let you steer the style of the opening line.
 - Tone selector: Surreal, Dramatic, Dark, Whimsical, Melancholic, Tense
 - API key entered directly in the app — no configuration files needed
 - 2-second cooldown to prevent accidental spam
-- Amber-on-dark colour scheme designed for creative focus
+- Amber-on-dark color scheme designed for creative focus
 - Clean, minimal interface — no clutter, no distractions
 
 ---
