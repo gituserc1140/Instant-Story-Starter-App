@@ -240,7 +240,7 @@ def main():
     if not api_key:
         st.warning(
             "Enter your Groq API key in the sidebar to get started. "
-            "Get a free key at console.groq.com/keys"
+            "Get a free key at [console.groq.com/keys](https://console.groq.com/keys)"
         )
         st.stop()
 
