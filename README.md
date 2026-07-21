@@ -93,8 +93,4 @@ Each click is a fresh generation — no two lines will be the same.
 
 If you find this useful, consider [sponsoring on GitHub](https://github.com/sponsors/gituserc1140).
 
----
 
-## License
-
-MIT
