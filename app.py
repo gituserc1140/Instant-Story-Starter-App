@@ -255,9 +255,6 @@ def main():
         <a class="sidebar-link btn-sponsor" href="{SPONSORS_URL}" target="_blank" rel="noopener noreferrer">
             GitHub Sponsors — Support
         </a>
-        <a class="sidebar-link btn-streamlit" href="{STREAMLIT_URL}" target="_blank" rel="noopener noreferrer">
-            Deploy on Streamlit Cloud
-        </a>
         """,
         unsafe_allow_html=True,
     )
