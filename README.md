@@ -4,7 +4,7 @@
 
 A lightweight Streamlit micro-app that generates a single cinematic, atmospheric opening line for a story — powered by the [Groq API](https://console.groq.com).
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/cloud)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://instant-story-starter-app-keqvpwmgp3rvgbe53tzuxl.streamlit.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-View%20Source-21262d?logo=github)](https://github.com/gituserc1140/Instant-Story-Starter-App)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support-bf3989?logo=github-sponsors)](https://github.com/sponsors/gituserc1140)
 
